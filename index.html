@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Pinterest</title>
+    <link rel="shortcut icon" href="/assets/icons/pinterest.ico" />
+    
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" media="(max-width: 800px)" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav id="navbar-pinterest">
+        <div class="navbar_pinteres_buttons_container">
+            <div class="navbar_pinteres_buttons">
+                <a id="pinterest-icon" href="https://www.pinterest.com.mx/">
+                    <i class="bi bi-pinterest" style="font-size: 1.5rem;"></i>
+                </a>
+                <button class="btn_inicio">Inicio</button>
+                <button class="btn_hoy">Hoy</button>
+
+                <select name="dropdown_crear" id="dropdown_crear">
+                <option value="" hidden selected>Crear</option>
+                <option value="crear_un_idea_pin">Crear un Idea Pin</option>
+                <option value="crear_pin">Crear Pin</option>
+                </select>
+            </div>
+        </div>
+        <div class="navbar_input_search_container">
+            <div class="navbar_input_search">
+                <i class="bi bi-search"></i>
+                <input class="finder" type="text" text-area placeholder="Search">
+            </div>
+        </div>
+        <div class="navbar_user_buttons_container">
+            <button id="notifications">
+                <i class="bi bi-bell-fill" style="font-size: 1.5rem;"></i>
+            </button>
+            <button class="btn_chat_dots" id="message">
+                <i class="bi bi-chat-dots-fill" style="font-size: 1.5rem;"></i>
+            </button>
+            <button class="btn_perfil" id="profile-img">
+                <img class="user_img" src="/assets/imgs/gatito.jpg" alt="user">
+            </button>
+            <select name="dropdown_user" id="dropdown_user">
+            <option value="" hidden selected>Crear</option>
+            <option value="crear_un_idea_pin"></option>
+            <option value="crear_pin"></option>
+            </select>
+        </div>
+    </nav>
+    <main id="content">
+        <!-- Contenedor de pines -->
+        <!-- El proyecto debe contener al menos 30 imgs -->
+        <div class="pin_container">
+            <div class="card card_small">
+                <div class="card-image">
+                     <img class="img" src="/assets/imgs/gatito.jpg" alt="gatito"> 
+                </div>
+                <div class="card_buttons_on_hover"> 
+                    <div class="card_buttons_on_hover-header">
+                        <button class="btn_guardar">Guardar</button>
+                    </div>
+                    <div class="card_buttons_on_hover-footer">
+                        <button class="btn_update">
+                            <i class="bi bi-upload" style="font-size: 16px;"></i>
+                        </button>
+                        <button class="btn_dots">
+                            <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card_medium">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito1.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover">
+                <div class="card_buttons_on_hover-header">
+                    <button class="btn_guardar">Guardar</button>
+                </div>
+                <div class="card_buttons_on_hover-footer">
+                    <button class="btn_update">
+                        <i class="bi bi-upload" style="font-size: 16px;"></i>
+                    </button>
+                    <button class="btn_dots">
+                        <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                    </button>
+                </div>
+               </div>
+            </div>
+            <div class="card card_large">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito2.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover">
+                <div class="card_buttons_on_hover-header">
+                    <button class="btn_guardar">Guardar</button>
+                </div>
+                <div class="card_buttons_on_hover-footer">
+                    <button class="btn_update">
+                        <i class="bi bi-upload" style="font-size: 16px;"></i>
+                    </button>
+                    <button class="btn_dots">
+                        <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                    </button>
+                </div>
+               </div>
+            </div>
+            <div class="card card_small">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito3.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_medium">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito4.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_large">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito5.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_small">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito6.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_medium">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito7.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_large">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito8.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+
+            <div class="card card_small">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito9.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_medium">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito10.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_large">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito11.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_small">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito12.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_medium">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito13.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_large">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito14.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_small">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito15.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_medium">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito16.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_large">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito17.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_small">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito18.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_medium">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito19.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_large">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito20.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_small">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito21.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_medium">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito22.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_large">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito23.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_small">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito12.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_medium">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito24.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_large">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito25.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_small">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito26.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_medium">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito27.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_large">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito28.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_small">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito29.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_medium">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito31.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+            <div class="card card_small">
+                <div class="card-image">
+                    <img class="img" src="/assets/imgs/gatito32.jpg" alt="gatito"> 
+               </div>
+               <div class="card_buttons_on_hover"> 
+                   <div class="card_buttons_on_hover-header">
+                       <button class="btn_guardar">Guardar</button>
+                   </div>
+                   <div class="card_buttons_on_hover-footer">
+                       <button class="btn_update">
+                           <i class="bi bi-upload" style="font-size: 16px;"></i>
+                       </button>
+                       <button class="btn_dots">
+                           <i class="bi bi-three-dots" style="font-size: 16px;"></i>
+                       </button>
+                   </div>
+               </div>
+            </div>
+        </div>
+        <!-- Fin de contenedor de pines -->
+        <!-- Botón flotante -->
+        <div class="container-fluid d-flex position-absolute bottom-0 end-0">
+            <a title="Agregar" class="btn btn-primary btn-lg rounded-circle ms-auto me-5 mb-5"
+                ng-click="disposeRequest()" data-bs-toggle="modal" data-bs-target="#newRequest">
+                <i class="fa-solid fa-plus"></i>
+            </a>
+        </div>
+        <!-- Fin botón flotante -->
+    </main>
+</body>
+
+</html>

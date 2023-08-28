@@ -1,0 +1,417 @@
+/*padding. Las unidades de medida van pegaditas a su unidad*/
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    /* referencia a 1rem*/
+}
+
+
+/*variables css. Cuando tiene dos puntitos: es pseudoelemento*/
+:root {
+    --card_width: 15.625rem;
+    /*~250px Anchura de la tarjeta/pin */
+    --row_increment: 0.625rem;
+    /*~10px Al estar usando CSS grid, cada tarjeta/pin estará hecha con incrementos de 10px para las filas */
+    --card_border_radius: 1rem;
+    /*~16px  Redondeo en los bordes de las tarjetas/pines*/
+    --card_small: 26;
+    /* Factor de crecimiento para tarjetas pequeñas: 26*0.625rem */
+    --card_medium: 33;
+    /* Factor de crecimiento para tarjetas medianas: 26*0.625rem */
+    --card_large: 45;
+    /* Factor de crecimiento para tarjetas grandes: 26*0.625rem */
+}
+
+
+#content {
+    height: 100vh;
+    width: 100%;
+    background-color: blanchedalmond;
+}
+
+
+#navbar-pinterest {
+    height: 5rem;
+    background-color: brown;
+    /*flex, distribuir en barra de navegacion y se acomoden*/
+    display: flex;
+}
+
+.navbar_pinteres_buttons_container {
+    width: 16rem;
+    background-color: #ffffff;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-inline-start: 0.93rem;
+    padding-inline-end: .3rem;
+}
+
+.navbar_pinteres_buttons {
+    width: 16rem;
+    background-color: #ffffff;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#pinterest-icon {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    border-radius: 50%;
+    align-content: center;
+    flex-wrap: wrap;
+    background: #ffffff;
+    color: red;
+    border: 0;
+    padding-inline-start: 0.75rem;
+    padding-inline-end: 0.75rem;
+    background-position: center;
+}
+
+#pinterest-icon:hover {
+    background: #e9e9e9;
+}
+
+#pinterest-icon:active{
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    border-radius: 50%;
+    align-content: center;
+    flex-wrap: wrap;
+    background: #ffffff;
+    color: red;
+    border: 0;
+    padding-inline-start: 0.75rem;
+    padding-inline-end: 0.75rem;
+    background-position: center;
+}
+
+.btn_inicio {
+    min-width: 3.75rem;
+    height: 3rem;
+    border: 0;
+    background: #ffffff;
+}
+
+.btn_inicio:focus {
+    color: #ffffff;
+    background: #000000;
+    border-radius: 62.43rem;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .btn_inicio {
+    display: none;
+    font-family: apple-system, BlinkMacSystemFont, Segoe UI, Roboto;
+  }
+}
+
+.btn_hoy {
+    min-width: 3.75rem;
+    height: 3rem;
+    border: 0;
+    background: #ffffff;
+    font-size: 16px;
+}
+
+.btn_hoy:focus {
+    color: #ffffff;
+    background: #000000;
+    border-radius: 62.43rem;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .btn_hoy {
+    display: none;
+  }
+}
+
+#dropdown_crear {
+    width: 4rem;
+    height: 3rem;
+    border: 0;
+    outline: none;
+}
+
+#dropdown_crear:hover {
+    outline: none;
+}
+
+.navbar_input_search_container {
+    flex-grow: 3;
+    min-width: 3rem;
+    background-color: white;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+.navbar_input_search {
+    padding-inline-start: 0.6rem;
+    height: 3rem;
+    width: 100%;
+    background-color: #e9e9e9;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-inline-end: 1rem;
+
+}
+
+.navbar_input_search>input {
+    height: 1rem;
+    flex-grow: 3;
+    background-color: #e9e9e9;
+    border: 1px solid #e9e9e9;
+}
+
+.bi-search {
+    color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline-start: 0.6rem;
+    padding-inline-end: 1rem;
+}
+
+.input_search:focus {
+    outline: none;
+}
+
+.navbar_user_buttons_container {
+    width: 13rem;
+    background-color: white;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#notifications {
+    height: 3rem;
+    width: 3rem;
+    display: block;
+    border-radius: 50%;
+    align-content: center;
+    flex-wrap: wrap;
+    background: #ffffff;
+    color: #6b6b6b;
+    border: 0;
+}
+
+#notifications:hover {
+    background: #e9e9e9;
+}
+
+#notifications:focus {
+    color: #000000;
+}
+
+#message {
+    height: 3rem;
+    width: 3rem;
+    display: block;
+    border-radius: 50%;
+    align-content: center;
+    flex-wrap: wrap;
+    background: #ffffff;
+    color: #6b6b6b;
+    border: 0;
+}
+
+#message:hover {
+    background: #e9e9e9;
+}
+
+#message:focus {
+    color: #000000;
+}
+
+#profile-img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-position: center;
+    background: #ffffff;
+    border: 0;
+}
+
+#profile-img:hover {
+    background: #e9e9e9;
+}
+
+.user_img {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+
+#dropdown_user {
+    margin-top: 0.6rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0;
+    outline: none;
+}
+
+#dropdown_user:hover {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #e9e9e9;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.pin_container {
+    margin: 0;
+    padding: 0;
+    /*width de area negra*/
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    /*habra columnas hasta que se llene. Efecto responsivo del acamodo
+    de las tarjetas*/
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    /*si ya no hay espacio, las pasa a la siguiente fila*/
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+
+    background-color: #ffffff;
+}
+
+.card {
+    position: relative;
+    padding: 0;
+    margin: 15px 10px;
+    border-radius: var(--card_border_radius);
+}
+
+.card-image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    border-radius: var(--card_border_radius);
+}
+
+.card_buttons_on_hover{
+    width: 100%;
+    height: 100%;   
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    opacity: 0;
+    background-color: rgba(60, 60, 60, 0.3);
+    color: white;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: var(--card_border_radius);
+}
+
+.card_buttons_on_hover:hover{
+    opacity: 1;
+}
+
+.card_buttons_on_hover-header{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding: 0.5rem;
+}
+
+.card_buttons_on_hover-footer{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.card_small {
+    grid-row-end: span var(--card_small);
+}
+
+.card_small>img {
+    grid-row-end: span var(--card_small);
+}
+
+.card_medium {
+    grid-row-end: span var(--card_medium);
+}
+
+.card_large {
+    grid-row-end: span var(--card_large);
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--card_border_radius);
+}
+
+.btn_guardar{
+    min-width: 6rem;
+    height: 2.5rem;
+    color: #ffffff;
+    border: 0;
+    border-radius: 62.43rem;
+    background: red;
+    font-size: 16px;
+    font-family: apple-system, BlinkMacSystemFont, Segoe UI, Roboto;
+    font-weight: bold;
+}
+
+.btn_guardar:hover{
+    background-color: rgb(161, 25, 25);
+}
+
+.btn_update{
+    min-height: 2rem;
+    min-width: 2rem;
+    background-color: rgba(255,255,255,0.6);
+    color: #000000;
+    border: 0;
+    border-radius: 50%;
+    margin-inline-end: 0.5rem;
+}
+.btn_update:hover{
+    background: #ffffff;
+}
+
+.btn_dots{
+    min-height: 2rem;
+    min-width: 2rem;
+    background-color: rgba(255,255,255,0.6);
+    color: #000000;
+    border: 0;
+    border-radius: 50%;      
+}
+
+.btn_dots:hover{
+    background: #ffffff;
+}
+
+
